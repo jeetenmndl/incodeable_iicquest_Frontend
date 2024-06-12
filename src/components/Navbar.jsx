@@ -48,7 +48,7 @@ const Navbar = () => {
         <div className="tier1 hidden lg:flex leading-[80px] [&>a]:uppercase">
           <Link href="/my-issues" className="mx-8 tracking-widest cursor-pointer hover:underline">My Issues</Link>
           <Link href="/replies" className="mx-8 tracking-widest cursor-pointer hover:underline">Replies</Link>
-          <Link href="/" className="mx-8 tracking-widest cursor-pointer hover:underline">Post room</Link>
+          <Link href="/relation" className="mx-8 tracking-widest cursor-pointer hover:underline">Relation</Link>
           <Link href="/" className="mx-8 tracking-widest cursor-pointer hover:underline">Guide</Link>
         </div>
       </div>
