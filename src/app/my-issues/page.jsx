@@ -11,8 +11,8 @@ const page = async () =>  {
 
   return (
     <main className='px-2 md:px-6 lg:px-12 xl:px-28 py-8'>
-        <h1 className='text-2xl lg:text-4xl font-semibold'>My Issues</h1>
-        <MyIssuesPage allIssues={response.payload} />
+        <h1 className='text-2xl lg:text-4xl font-semibold'>Recent Issue</h1>
+        <MyIssuesPage allIssues={response.payload}  />
     </main>
   )
 }

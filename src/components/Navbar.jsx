@@ -27,7 +27,7 @@ const Navbar = () => {
       </div>
       <div className="tier2 leading-10">
         <div className="ml-8 tracking-widest">
-          {/* <LoginLogout /> */}
+          <LoginLogout />
         </div>
       </div>
     </nav>
@@ -46,8 +46,8 @@ const Navbar = () => {
 
         {/* <!-- links primary  --> */}
         <div className="tier1 hidden lg:flex leading-[80px] [&>a]:uppercase">
-          <Link href="/" className="mx-8 tracking-widest cursor-pointer hover:underline">Category</Link>
-          <Link href="/" className="mx-8 tracking-widest cursor-pointer hover:underline">Find Room</Link>
+          <Link href="/my-issues" className="mx-8 tracking-widest cursor-pointer hover:underline">My Issues</Link>
+          <Link href="/replies" className="mx-8 tracking-widest cursor-pointer hover:underline">Replies</Link>
           <Link href="/" className="mx-8 tracking-widest cursor-pointer hover:underline">Post room</Link>
           <Link href="/" className="mx-8 tracking-widest cursor-pointer hover:underline">Guide</Link>
         </div>

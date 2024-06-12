@@ -38,7 +38,7 @@ const Feed =   () => {
   
       }
 
-      console.log(userID)
+    //   console.log(userID)
 
   return (
     <>

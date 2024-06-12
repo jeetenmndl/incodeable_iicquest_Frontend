@@ -44,9 +44,9 @@ const MyIssuesPage =   (props) => {
                     <Card key={issue.id} className={issue.issued_by==userID?"":"hidden"}>
                         <CardHeader>
                             <CardTitle>{issue.title}</CardTitle>
+                            <CardDescription>Preferred Character: <span className='font-medium'>{issue.preferred_char}</span></CardDescription>
                         </CardHeader>
                         <CardContent>
-                            <p>Preferred Character: <span>{issue.preferred_char}</span> </p>
                             <p>{issue.description}</p>
                         </CardContent>
                     </Card>
