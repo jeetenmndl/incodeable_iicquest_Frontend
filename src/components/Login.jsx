@@ -72,7 +72,7 @@ const Login = () => {
             else{
                 toast({
                     title: "Oops !",
-                    description: response.error,
+                    description: response.message,
                     variant: "destructive",
                 })
             }
@@ -98,7 +98,7 @@ const Login = () => {
 
     <Card>
         <CardHeader>
-            <CardTitle>Login to Farmauction</CardTitle>
+            <CardTitle>Login to Pariwar</CardTitle>
             <CardDescription>Fill the details to Login </CardDescription>
         </CardHeader>
         <CardContent className="space-y-2">

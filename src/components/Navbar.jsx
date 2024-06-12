@@ -17,7 +17,7 @@ const Navbar = () => {
     <>
     {/* <!-- Top nav bar for secondary links --> */}
     <nav
-      className="w-full px-20 text-xs text-333 hidden md:flex border-b border-gray-light justify-end"
+      className="w-full px-2 md:px-6 lg:px-12 xl:px-28 text-xs text-333 hidden md:flex border-b border-gray-light justify-end"
     >
       <div className="tier1 flex leading-10">
         <Link href="/" className="mx-8 text-center tracking-widest cursor-pointer hover:underline">ABOUT</Link>
@@ -27,14 +27,14 @@ const Navbar = () => {
       </div>
       <div className="tier2 leading-10">
         <div className="ml-8 tracking-widest">
-          <LoginLogout />
+          {/* <LoginLogout /> */}
         </div>
       </div>
     </nav>
 
 
     {/* <!-- Second Nav bar for logo and primary Links --> */}
-    <header className="w-full px-4 py-2 md:py-0.5 md:px-20 text-sm text-333 font-semibold shadow-sm flex items-center justify-between border-b border-gray-light">
+    <header className=" px-2 md:px-6 lg:px-12 xl:px-28 w-full py-2 md:py-0.5 text-sm text-333 font-semibold shadow-sm flex items-center justify-between border-b border-gray-light">
       <div className="flex">
       {/* <!-- logo --> */}
         <div className="logo flex items-center gap-2 md:gap-4 mr-9 cursor-pointer">

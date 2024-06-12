@@ -42,7 +42,7 @@ const SideBar = () => {
             <hr />
             <div className='py-4'>
               <Button className="w-full bg-main">
-                <LoginLogout />
+                {/* <LoginLogout /> */}
               </Button>
             </div>
     </SheetContent>

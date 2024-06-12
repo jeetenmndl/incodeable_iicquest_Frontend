@@ -17,17 +17,12 @@ const LoginLogout = () => {
     }, [])
     
 
-    if(logged != null && logged != "" && logged != undefined){
-        return (
-                <Link href="/force-logout" className="font-bold cursor-pointer hover:underline">LOG OUT</Link>
-        )
-    }
-    else{
         return(
-            
+            logged != null && logged != "" && logged?
             <Link href="/auth" className="font-bold cursor-pointer hover:underline">LOG IN</Link>
+            :
+            <Link href="/force-logout" className="font-bold cursor-pointer hover:underline">LOG OUT</Link>
         )
-    }
 }
 
 export default LoginLogout

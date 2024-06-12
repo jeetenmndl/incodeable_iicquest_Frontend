@@ -156,7 +156,7 @@ const Register = () => {
 
     <Card className={step==2?"hidden":""}>
         <CardHeader>
-            <CardTitle>Register to PARIWAR</CardTitle>
+            <CardTitle>Register to Pariwar</CardTitle>
             <CardDescription>Fill the details to proceed the registration </CardDescription>
         </CardHeader>
         <CardContent className="space-y-2">
@@ -230,12 +230,10 @@ const Register = () => {
                   <SelectItem value="father">Father</SelectItem>
                   <SelectItem value="mother">Mother</SelectItem>
                   <SelectItem value="son">Son</SelectItem>
-                  <SelectItem value="daughter">Crops</SelectItem>
+                  <SelectItem value="daughter">Daughter</SelectItem>
                   <SelectItem value="grandfather">Grandfather</SelectItem>
                   <SelectItem value="grandmother">Grandmother</SelectItem>
                   <SelectItem value="uncle">Uncle</SelectItem>
-
-
                 </SelectContent>
               </Select>
                 {/* <FormDescription>
