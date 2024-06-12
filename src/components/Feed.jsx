@@ -4,8 +4,8 @@ import getMyIssue from '@/lib/actions/getMyIssue'
 import React, { useEffect, useState } from 'react'
 import { Card, CardHeader, CardDescription, CardContent, CardTitle, CardFooter} from "./ui/card"
 import { Button } from './ui/button'
-import { Link } from 'lucide-react'
 import getCharacterIssues from '@/lib/actions/getCharacterIssues'
+import Link from 'next/link'
 
 const Feed =   () => {
 
@@ -52,8 +52,12 @@ const Feed =   () => {
                             <CardDescription>Preferred Character: <span className='font-medium'>{issue.preferred_char}</span></CardDescription>
                         </CardHeader>
                         <CardContent>
-                            <p>{issue.description}</p>
+                            <p className='leading-8'>{issue.description}</p>
                         </CardContent>
+                        <CardFooter className=" flex justify-end items-center">
+                            <Link href={"/reply/"+issue.id}><Button className="bg-main w-40 h-10">Reply</Button>
+                            </Link>
+                        </CardFooter>
                     </Card>
 
                 )
