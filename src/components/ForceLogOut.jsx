@@ -6,7 +6,8 @@ const ForceLogOut = () => {
     const router = useRouter();
 
     useEffect(() => {
-        localStorage.removeItem("auth-token");
+        localStorage.removeItem("username");
+        localStorage.removeItem("id");
         router.push("/");
       // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])

@@ -20,7 +20,7 @@ import { Input } from './ui/input'
 import { useToast } from './ui/use-toast'
 import { Loader2 } from 'lucide-react'
 import { useRouter } from 'next/navigation'
-// import checkLogin from '@/lib/actions/checkLogin'
+import checkLogin from '@/lib/actions/checkLogin'
 import Link from 'next/link'
   
 
@@ -55,16 +55,16 @@ const Login = () => {
         // console.log(values);
         try {
             setLoading(true);
-            // const response = await checkLogin(values);
-            // console.log("in login page", response);
-            if(response.login==true){
+            const response = await checkLogin(values);
+            console.log("in login page", response);
+            if(response.posted==true){
                 toast({
                     title: "Congratulations !",
                     description: "Logged in sucessfully.",
                 })
 
-                localStorage.setItem("username", values.username)
-                localStorage.setItem("token", response.access)
+                localStorage.setItem("username", response.user_name)
+                localStorage.setItem("id", response.user_id)
                 
 
                 router.push("/")
@@ -151,12 +151,7 @@ const Login = () => {
                     <Loader2 className=" h-4 w-4 animate-spin" />
                 </Button>
             }
-            <div className="mt-4 text-center text-sm">
-          Don&apos;t have an account?{" "}
-          <Link href="/register" className="underline">
-            Register
-          </Link>
-        </div>
+            
         </CardFooter>
     </Card>
 
