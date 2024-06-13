@@ -28,21 +28,21 @@ const SideBar = () => {
         </SheetHeader>
             <div className='flex flex-col [&>a]:py-4 uppercase text-black'>
               <Link href="/my-issues">My Issues</Link>
-              <Link href="/replies">Replies</Link>
+              <Link href="/replies">Suggestions</Link>
               <Link href="/relation">Relation</Link>
               <Link href="/guide">Guide</Link>
             </div>
             <hr />
             <div className='flex flex-col [&>a]:py-4 [&>a]:uppercase [&>a]:text-sm [&>a]:text-gray-700'>
               <h3 className='font-semibold mt-4 mb-4 text-lg '>More Links</h3>
-              <Link href="/">About Us</Link>
-              <Link href="/">Contact Us</Link>
-              <Link href="/">FAQs / Help</Link>
+              <Link href="/about">About Us</Link>
+              <Link href="/contact">Contact Us</Link>
+              <Link href="/faq">FAQs / Help</Link>
             </div>
             <hr />
             <div className='py-4'>
               <Button className="w-full bg-main">
-                {/* <LoginLogout /> */}
+                <LoginLogout />
               </Button>
             </div>
     </SheetContent>

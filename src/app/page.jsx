@@ -11,19 +11,57 @@ import Bpkihs from "@/../public/bpkihs.jpg"
 import Kopila from "@/../public/kopila.jpg"
 
 import Logo from "@/../public/logo.png"
-
+import Hero from "@/../public/hero.svg"
+import Card1 from "@/../public/card1.svg"
+import Card2 from "@/../public/card2.svg"
+import Card3 from "@/../public/card3.svg"
 
 import Image from "next/image";
 
 export default function Home() {
   return (
     <>
-    <main className=' px-2 md:px-6 lg:px-12 xl:px-28 md:pt-8 flex flex-col-reverse lg:flex-row gap-8 xl:gap-16 md:justify-between'>
+    <main className=' px-2 md:px-6 lg:px-12 xl:px-28 md:pt-8 flex flex-col-reverse lg:flex-row gap-8 xl:gap-12 md:justify-between'>
+
+
       
       <section className="lg:w-2/3 ">
+
+      <section className="grid grid-cols-1 lg:grid-cols-3 px-6 lg:px-0 gap-6 [&>div]:rounded-md">
+        
+        <div className="border lg:h-96 p-5 lg:p-3 bg-green-100">
+          <h3 className="font-medium text-2xl">Build a virtual Family</h3>
+        <p className="text-xs text-gray-600 pt-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum alias rem perspiciatis delectus earum dolorem iusto praesentium facere</p>
+        <hr className="border-blue-200 mt-5" />
+        <div className="w-full px-4 py-8">
+          <Image src={Card1} className="w-full " alt="card1" />
+        </div>
+        </div>
+
+
+        <div className="border lg:h-96 p-5 lg:p-3 bg-blue-100">
+          <h3 className="font-medium text-2xl">Share Thoughts & Problems</h3>
+        <p className="text-xs text-gray-600 pt-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum alias rem perspiciatis delectus earum dolorem iusto praesentium facere</p>
+        <hr className="border-blue-200 mt-5" />
+        <div className="w-full px-8 py-4">
+          <Image src={Card2} className="w-full " alt="card1" />
+        </div>
+        </div>
+        
+        <div className="border lg:h-96 p-5 lg:p-3 bg-orange-100">
+          <h3 className="font-medium text-2xl">Track Down the Resolution</h3>
+        <p className="text-xs text-gray-600 pt-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum alias rem perspiciatis delectus earum dolorem iusto praesentium facere</p>
+        <hr className="border-blue-200 mt-5" />
+        <div className="w-full px-8 py-4">
+          <Image src={Card3} className="w-full " alt="card1" />
+        </div>
+        </div>
+
+      </section>
+
       
 
-        <div className="relative px-2 md:px-0 rounded-lg h-60 overflow-hidden grid place-content-center">
+        <div className="hidden relative px-2 md:px-0 rounded-lg h-60 overflow-hidden  place-content-center">
          <Image src={Banner} className="w-full brightness-50 " alt="banner" />
          <h1 className="text-2xl lg:text-4xl font-bold my-4 lg:my-8 absolute top-0 text-white left-8">परिवार : जोडौ न्यानो सम्बन्ध
         </h1>
@@ -34,27 +72,13 @@ export default function Home() {
          <Image src={Banner2} className="w-full brightness-75 " alt="banner" />
         </div> */}
 
-        <hr className="mt-12 border-gray-300" />
-
-        <div className="my-8">
-          <h2 className="text-3xl font-semibold">Your Relations<span className="text-xl text-gray-700">(chats)</span></h2>
-          <article className="flex gap-8 mt-8">
-            <Image src={Logo} className="h-28 w-28 rounded-full" alt="avatar" />
-            <Image src={Logo} className="h-28 w-28 rounded-full" alt="avatar" />
-            <Image src={Logo} className="h-28 w-28 rounded-full" alt="avatar" />
-            <Image src={Logo} className="h-28 w-28 rounded-full" alt="avatar" />
-
-          </article>
-
-
-        </div>
 
 
         <hr className="mt-12 border-gray-300" />
 
 
         <div className="my-8 px-2 md:px-0">
-          <h2 className="text-3xl font-semibold">Feeds matching your character
+          <h2 className="text-3xl font-semibold ">Feeds Matching Your Character
           </h2>
           
           <Feed />

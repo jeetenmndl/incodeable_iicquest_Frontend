@@ -49,7 +49,7 @@ const Feed =   () => {
         {
            userID && issues && issues.map((issue)=>{
                 return(
-                    <Card key={issue.id} className="bg-blue-100">
+                    <Card key={issue.id} className="bg-green-50">
                         <CardHeader>
                             <CardTitle>{issue.title}</CardTitle>
                             <CardDescription>Preferred Character: <span className='font-medium'>{issue.preferred_char}</span></CardDescription>

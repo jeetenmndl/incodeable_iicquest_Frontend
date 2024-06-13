@@ -20,9 +20,9 @@ const Navbar = () => {
       className="w-full px-2 md:px-6 lg:px-12 xl:px-28 text-xs text-333 hidden md:flex border-b border-gray-light justify-end"
     >
       <div className="tier1 flex leading-10">
-        <Link href="/" className="mx-8 text-center tracking-widest cursor-pointer hover:underline">ABOUT</Link>
-        <Link href="/" className="mx-8 tracking-widest cursor-pointer hover:underline">FAQ&apos;S</Link>
-        <Link href="/" className="mx-8 tracking-widest cursor-pointer hover:underline">CONTACT</Link>
+        <Link href="/about" className="mx-8 text-center tracking-widest cursor-pointer hover:underline">ABOUT</Link>
+        <Link href="/faq" className="mx-8 tracking-widest cursor-pointer hover:underline">FAQ&apos;S</Link>
+        <Link href="/contact" className="mx-8 tracking-widest cursor-pointer hover:underline">CONTACT</Link>
       </div>
       <div className="tier2 leading-10">
         <div className="ml-8 tracking-widest">
@@ -46,7 +46,7 @@ const Navbar = () => {
         {/* <!-- links primary  --> */}
         <div className="tier1 hidden lg:flex leading-[80px] [&>a]:uppercase">
           <Link href="/my-issues" className="mx-8 tracking-widest cursor-pointer hover:underline">My Issues</Link>
-          <Link href="/replies" className="mx-8 tracking-widest cursor-pointer hover:underline">Replies</Link>
+          <Link href="/replies" className="mx-8 tracking-widest cursor-pointer hover:underline">Suggestions</Link>
           <Link href="/relation" className="mx-8 tracking-widest cursor-pointer hover:underline">Relation</Link>
           <Link href="/guide" className="mx-8 tracking-widest cursor-pointer hover:underline">Guide</Link>
         </div>

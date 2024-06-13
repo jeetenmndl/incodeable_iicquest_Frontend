@@ -23,7 +23,7 @@ const page = () => {
         </div>
       </ResizablePanel>
       <ResizableHandle withHandle />
-      <ResizablePanel defaultSize={75}>
+      <ResizablePanel defaultSize={75} className='hidden lg:block'>
         <div className="flex h-full items-center justify-center p-6">
           <span className="font-semibold text-3xl text-main">Select relation to chat </span>
         </div>

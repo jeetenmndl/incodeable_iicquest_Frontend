@@ -63,7 +63,7 @@ const RecentIssue = () => {
     {
         data && <>
         {
- data.length==0?<p className='text-center text-2xl'>No Replies to show</p>:
+ data.length==0?<p className='text-center text-2xl'>No Suggestions to show</p>:
  data.map((item)=>{
      return(
          <Card key={item.id}>

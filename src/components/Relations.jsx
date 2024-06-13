@@ -52,8 +52,8 @@ const Relations = () => {
             <AvatarFallback>CN</AvatarFallback>
         </Avatar>
         <div>
-            <h2 className='text-lg font-medium'>{item.relation_name}</h2>
-            <span className='text-sm text-gray-500'>something in it</span>
+            <h2 className='text-lg font-medium'>{item.relation_name} - {item.id}</h2>
+            <span className='text-sm text-gray-500'>2024-06-14</span>
         </div>
 
         </div>
