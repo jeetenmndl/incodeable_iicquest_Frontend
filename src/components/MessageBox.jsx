@@ -5,8 +5,11 @@ import React, { useEffect, useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { SendHorizontal } from 'lucide-react'
 import { Input } from '@/components/ui/input'
+import postChat from '@/lib/actions/postChat'
+import { revalidatePath } from 'next/cache'
 
-const MessageBox = () => {
+const MessageBox = (props) => {
+    const {relation_id} = props;
 
     useEffect( () => {
         const token = localStorage.getItem("id");
@@ -27,10 +30,15 @@ const MessageBox = () => {
 
     const [user, setuser] = useState(null)
 
-    const sendChat = ()=>{
+    const sendChat = async ()=>{
         let message = document.getElementById("message").value;
         if(message!=""){
             console.log(message, user)
+            const response = await postChat(user, message, relation_id )
+            console.log(response)
+            if(response.success){
+                document.getElementById("message").value="";
+            }
         }
     }
 

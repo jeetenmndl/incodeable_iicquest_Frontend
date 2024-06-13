@@ -116,7 +116,7 @@ const IssueForm = () => {
     
     <Form {...form}>
     <form onSubmit={form.handleSubmit(onSubmit)} className="sticky top-8 pb-8">
-    <Card>
+    <Card className="shadow-lg">
         <CardHeader>
             <CardTitle>Share your Issue</CardTitle>
             <CardDescription>Fill the details to proceed </CardDescription>

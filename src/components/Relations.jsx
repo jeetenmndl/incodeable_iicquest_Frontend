@@ -45,7 +45,7 @@ const Relations = () => {
  data.length==0?<p className='text-center text-2xl'>No Relation to show</p>:
  data.map((item)=>{
      return(
-        <Link href={"relation/"+item.id} key={item.id}><Card className="w-full hover:bg-slate-200 mb-4">
+        <Link href={"/relation/"+item.id} key={item.id}><Card className="w-full hover:bg-slate-200 mb-4">
         <div className="flex gap-4 p-4">
         <Avatar>
         <AvatarImage src="https://github.com/shadcn.png" alt="@profile pic" />

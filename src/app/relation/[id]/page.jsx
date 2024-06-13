@@ -14,9 +14,18 @@ import { Button } from '@/components/ui/button'
 import { SendHorizontal } from 'lucide-react'
 import { Input } from '@/components/ui/input'
 import MessageBox from '@/components/MessageBox'
+import getChat from '@/lib/actions/getChat'
+import LeftRight from '@/components/LeftRight'
+import Support from "@/../public/support.jpg"
+import Image from 'next/image'
+import Relations from '@/components/Relations'
 
 
-const page = () => {
+const page = async ({params}) => {
+  console.log(params)
+  const response = await getChat(params.id);
+  let data = response.payload;
+
   return (
     <main className=' h-dvh lg:h-[600px] md:px-6 lg:px-12 xl:px-28 '>
 
@@ -26,45 +35,16 @@ const page = () => {
     >
       <article className='hidden lg:block lg:w-1/4'>
         <div className="h-full w-full p-6 space-y-4 [&>div]:cursor-pointer">
-          <Card className="w-full hover:bg-slate-200">
-            <div className="flex gap-4 p-4">
-            <Avatar>
-            <AvatarImage src="https://github.com/shadcn.png" alt="@profile pic" />
-                <AvatarFallback>CN</AvatarFallback>
-            </Avatar>
-            <div>
-                <h2 className='text-xl font-medium'>Relation1</h2>
-                <span className='text-sm text-gray-500'>something in it</span>
-            </div>
-
+          {/* <Card className="w-full hover:bg-slate-200">
+            <div className="flex justify-center gap-4 p-4">
+            <Image className='h-30 w-30 rounded-full' src={Support} alt="pp" />
             </div>
           </Card>
-          <Card className="w-full hover:bg-slate-200">
-            <div className="flex gap-4 p-4">
-            <Avatar>
-            <AvatarImage src="https://github.com/shadcn.png" alt="@profile pic" />
-                <AvatarFallback>CN</AvatarFallback>
-            </Avatar>
-            <div>
-                <h2 className='text-xl font-medium'>Relation1</h2>
-                <span className='text-sm text-gray-500'>something in it</span>
-            </div>
+          <p className="text-2xl font-semibold">Support Relation</p>
+          <p className='text-gray-700'>Participants: 2</p> */}
 
-            </div>
-          </Card>
-          <Card className="w-full hover:bg-slate-200">
-            <div className="flex gap-4 p-4">
-            <Avatar>
-            <AvatarImage src="https://github.com/shadcn.png" alt="@profile pic" />
-                <AvatarFallback>CN</AvatarFallback>
-            </Avatar>
-            <div>
-                <h2 className='text-xl font-medium'>Relation1</h2>
-                <span className='text-sm text-gray-500'>something in it</span>
-            </div>
-
-            </div>
-          </Card>
+          <Relations />
+          
         </div>
       </article>
 
@@ -73,49 +53,15 @@ const page = () => {
       <article className='w-full lg:w-3/4 lg:relative'>
       <div className=' h-full overflow-y-scroll overflow-hidden lg:pb-12'>
 {
-  [1,2,3,4,5,6].map((item) => {
+  data.map((item, index) => {
     return(
-      <Fragment key={item}>
-        {
-          item%2==0?
-          <div className=" p-2">
-          {/* chat bubble left */}
-        <div className='flex gap-3'>
-        <Avatar>
-            <AvatarImage src="https://github.com/shadcn.png" alt="@profile pic" />
-        <AvatarFallback>CN</AvatarFallback>
-    </Avatar>
 
-   <div className="bg-slate-300 flex flex-col w-full lg:w-96 leading-1.5 p-4 border-gray-200  rounded-e-xl rounded-es-xl dark:bg-gray-900">
-      <div className="flex items-center space-x-3 rtl:space-x-reverse">
-         <span className="text-sm font-semibold text-gray-800 dark:text-white">Bonnie Green</span>
-         <span className="text-sm font-normal text-gray-700 dark:text-gray-400">11:46</span>
-      </div>
-      <p className="text-sm font-normal py-2.5 text-gray-900 dark:text-white">Thats awesome. I think our users will really appreciate the improvements.</p>
-      <span className="text-sm font-normal text-gray-600 dark:text-gray-400">Delivered</span>
-   </div>
-       </div>
+      <div key={index*37} className=" p-2">
+          {/* chat bubble left */}
+       <LeftRight item={item} />
           </div>
-        :
-        <div className=" p-2">
-        {/* chat bubble left */}
-          <div className='flex flex-row-reverse gap-3'>
-          <Avatar>
-              <AvatarImage src="https://github.com/shadcn.png" alt="@profile pic" />
-          <AvatarFallback>CN</AvatarFallback>
-          </Avatar>
-        <div className="flex flex-col w-full lg:w-96 leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-s-xl rounded-ee-xl  dark:bg-gray-700">
-            <div className="flex items-center space-x-2 rtl:space-x-reverse">
-              <span className="text-sm font-semibold text-gray-900 dark:text-white">Bonnie Green</span>
-              <span className="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
-            </div>
-            <p className="text-sm font-normal py-2.5 text-gray-900 dark:text-white">Thats awesome. I think our users will really appreciate the improvements.</p>
-            <span className="text-sm font-normal text-gray-500 dark:text-gray-400">Delivered</span>
-        </div>
-        </div>
-          </div>
-        }
-      </Fragment>
+
+
 
 
     )
@@ -123,8 +69,8 @@ const page = () => {
 }
 </div>
         
-    <MessageBox />
-    
+    <MessageBox relation_id={params.id} />
+
       </article>
     </section>
 

@@ -21,7 +21,6 @@ const Navbar = () => {
     >
       <div className="tier1 flex leading-10">
         <Link href="/" className="mx-8 text-center tracking-widest cursor-pointer hover:underline">ABOUT</Link>
-        <Link href="/" className="mx-8 tracking-widest cursor-pointer hover:underline">SERVICES</Link>
         <Link href="/" className="mx-8 tracking-widest cursor-pointer hover:underline">FAQ&apos;S</Link>
         <Link href="/" className="mx-8 tracking-widest cursor-pointer hover:underline">CONTACT</Link>
       </div>
@@ -49,7 +48,7 @@ const Navbar = () => {
           <Link href="/my-issues" className="mx-8 tracking-widest cursor-pointer hover:underline">My Issues</Link>
           <Link href="/replies" className="mx-8 tracking-widest cursor-pointer hover:underline">Replies</Link>
           <Link href="/relation" className="mx-8 tracking-widest cursor-pointer hover:underline">Relation</Link>
-          <Link href="/" className="mx-8 tracking-widest cursor-pointer hover:underline">Guide</Link>
+          <Link href="/guide" className="mx-8 tracking-widest cursor-pointer hover:underline">Guide</Link>
         </div>
       </div>
 

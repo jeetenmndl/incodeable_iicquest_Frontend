@@ -3,29 +3,19 @@ import Feed from "@/components/Feed";
 import IssueForm from "@/components/IssueForm";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import Banner from "@/../public/banner.jpg"
+import Image from "next/image";
 
 export default function Home() {
   return (
     <>
     <main className=' px-2 md:px-6 lg:px-12 xl:px-28 md:pt-8 flex flex-col-reverse lg:flex-row gap-8 xl:gap-16 md:justify-between'>
       
-      <section className="lg:w-3/5 ">
+      <section className="lg:w-2/3 ">
       
 
-        <div className="my-8 px-2 md:px-0">
-          <h2 className="text-3xl font-semibold">Lorem ipsum dolor sit amet.
-          </h2>
-          
-          <p className="leading-8 mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, magnam? Corrupti error sint corporis vel ratione consectetur quisquam ea impedit repudiandae consequuntur, incidunt optio dicta distinctio explicabo fugit laudantium et quasi libero quidem accusamus suscipit. Dicta eos repellat veniam asperiores!</p>
-
-          <ul className="md:list-disc md:pl-4 pt-4 [&>li]:my-2 [&>li]:text-lg ">
-            <li>Child Trafficking</li>
-            <li>Child Abuse</li>
-            <li>Industry worker</li>
-            <li>Sexual abuse</li>
-            <li>More more</li>
-            <li>More more</li>
-          </ul>
+        <div className=" px-2 md:px-0 rounded-lg h-60 overflow-hidden grid place-content-center">
+         <Image src={Banner} className="w-full brightness-75 " alt="banner" />
         </div>
 
         <hr className="border-gray-300" />
@@ -43,7 +33,7 @@ export default function Home() {
         
       </section>
 
-      <section className="lg:w-2/5 px-2 md:px-0 pt-4 lg:pt-0">
+      <section className="lg:w-1/3 px-2 md:px-0 pt-4 lg:pt-0">
         <IssueForm />
       </section>
     

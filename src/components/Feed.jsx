@@ -49,7 +49,7 @@ const Feed =   () => {
         {
            userID && issues && issues.map((issue)=>{
                 return(
-                    <Card key={issue.id}>
+                    <Card key={issue.id} className="bg-blue-100">
                         <CardHeader>
                             <CardTitle>{issue.title}</CardTitle>
                             <CardDescription>Preferred Character: <span className='font-medium'>{issue.preferred_char}</span></CardDescription>
@@ -66,6 +66,11 @@ const Feed =   () => {
                 )
 
             })
+        }
+        {
+            userID && issues && <>
+            {issues.length==0?<p className='text-2xl text-center'>No feed to show</p>:""}
+            </>
         }
     </article>
 

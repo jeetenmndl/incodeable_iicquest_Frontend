@@ -27,10 +27,10 @@ const SideBar = () => {
           <SheetTitle className="text-left mb-4">Menu</SheetTitle>
         </SheetHeader>
             <div className='flex flex-col [&>a]:py-4 uppercase text-black'>
-              <Link href="/">Category</Link>
-              <Link href="/">Find Room</Link>
-              <Link href="/">Post Room</Link>
-              <Link href="/">Guide</Link>
+              <Link href="/my-issues">My Issues</Link>
+              <Link href="/replies">Replies</Link>
+              <Link href="/relation">Relation</Link>
+              <Link href="/guide">Guide</Link>
             </div>
             <hr />
             <div className='flex flex-col [&>a]:py-4 [&>a]:uppercase [&>a]:text-sm [&>a]:text-gray-700'>
