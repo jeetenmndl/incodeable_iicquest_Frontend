@@ -52,7 +52,7 @@ const Relations = () => {
             <AvatarFallback>CN</AvatarFallback>
         </Avatar>
         <div>
-            <h2 className='text-xl font-medium'>{item.relation_name}</h2>
+            <h2 className='text-lg font-medium'>{item.relation_name}</h2>
             <span className='text-sm text-gray-500'>something in it</span>
         </div>
 
