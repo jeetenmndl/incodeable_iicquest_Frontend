@@ -6,12 +6,15 @@ import { Card, CardHeader, CardDescription, CardContent, CardTitle, CardFooter} 
 import { Button } from './ui/button'
 import getCharacterIssues from '@/lib/actions/getCharacterIssues'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
+import { toast } from './ui/use-toast'
 
 const Feed =   () => {
 
     const [mustLog, setMustLog] = useState(false);
     const [userID, setuserID] = useState(null)
     const [issues, setissues] = useState(null)
+    const router = useRouter();
     
     
     useEffect(() => {
@@ -28,7 +31,7 @@ const Feed =   () => {
             title: "Alert !",
             description: "You must log .",
         })
-          router.push("/auth");
+        //   router.push("/auth");
         }
 
         const response = await getCharacterIssues(check);

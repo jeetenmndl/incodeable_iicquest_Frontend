@@ -38,6 +38,7 @@ import {
     InputOTPSlot,
   } from "@/components/ui/input-otp"
 import postIssue from '@/lib/actions/postIssue'
+import { revalidatePath } from 'next/cache'
   
 
 
@@ -88,6 +89,8 @@ const IssueForm = () => {
                     title: "Congratulations !",
                     description: "Issue uploaded sucessfully.",
                 })
+
+                revalidatePath("/my-issues")
             }
             else{
                 toast({

@@ -5,6 +5,8 @@ import React, { useEffect, useState } from 'react'
 import { Card, CardHeader, CardDescription, CardContent, CardTitle, CardFooter} from "./ui/card"
 import { Button } from './ui/button'
 import { Link } from 'lucide-react'
+import { toast } from './ui/use-toast'
+import { useRouter } from 'next/navigation'
 
 const MyIssuesPage =   (props) => {
 
@@ -12,6 +14,7 @@ const MyIssuesPage =   (props) => {
 
     const [mustLog, setMustLog] = useState(false);
     const [userID, setuserID] = useState(null)
+    const router = useRouter()
     
     
     useEffect(() => {

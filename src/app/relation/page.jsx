@@ -7,6 +7,7 @@ import {
 import { Card, CardContent } from '@/components/ui/card'
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar'
 import Link from 'next/link'
+import Relations from '@/components/Relations'
 
 const page = () => {
   return (
@@ -18,50 +19,7 @@ const page = () => {
     >
       <ResizablePanel defaultSize={25}>
         <div className="h-full w-full p-6">
-          <Link href="/relation/1" className='mb-4'><Card className="w-full hover:bg-slate-200">
-            <div className="flex gap-4 p-4">
-            <Avatar>
-            <AvatarImage src="https://github.com/shadcn.png" alt="@profile pic" />
-                <AvatarFallback>CN</AvatarFallback>
-            </Avatar>
-            <div>
-                <h2 className='text-xl font-medium'>Relation1</h2>
-                <span className='text-sm text-gray-500'>something in it</span>
-            </div>
-
-            </div>
-          </Card>
-          </Link>
-          
-          <Link href="/relation/1" className='mb-4'><Card className="w-full hover:bg-slate-200">
-            <div className="flex gap-4 p-4">
-            <Avatar>
-            <AvatarImage src="https://github.com/shadcn.png" alt="@profile pic" />
-                <AvatarFallback>CN</AvatarFallback>
-            </Avatar>
-            <div>
-                <h2 className='text-xl font-medium'>Relation1</h2>
-                <span className='text-sm text-gray-500'>something in it</span>
-            </div>
-
-            </div>
-          </Card>
-          </Link>
-
-          <Link href="/relation/1" className='mb-4'><Card className="w-full hover:bg-slate-200">
-            <div className="flex gap-4 p-4">
-            <Avatar>
-            <AvatarImage src="https://github.com/shadcn.png" alt="@profile pic" />
-                <AvatarFallback>CN</AvatarFallback>
-            </Avatar>
-            <div>
-                <h2 className='text-xl font-medium'>Relation1</h2>
-                <span className='text-sm text-gray-500'>something in it</span>
-            </div>
-
-            </div>
-          </Card>
-          </Link>
+          <Relations />
         </div>
       </ResizablePanel>
       <ResizableHandle withHandle />

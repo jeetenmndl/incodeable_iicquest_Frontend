@@ -13,6 +13,7 @@ import { Textarea } from '@/components/ui/textarea'
 import { Button } from '@/components/ui/button'
 import { SendHorizontal } from 'lucide-react'
 import { Input } from '@/components/ui/input'
+import MessageBox from '@/components/MessageBox'
 
 
 const page = () => {
@@ -85,13 +86,13 @@ const page = () => {
         <AvatarFallback>CN</AvatarFallback>
     </Avatar>
 
-   <div class="bg-slate-300 flex flex-col w-full lg:w-96 leading-1.5 p-4 border-gray-200  rounded-e-xl rounded-es-xl dark:bg-gray-900">
-      <div class="flex items-center space-x-3 rtl:space-x-reverse">
-         <span class="text-sm font-semibold text-gray-800 dark:text-white">Bonnie Green</span>
-         <span class="text-sm font-normal text-gray-700 dark:text-gray-400">11:46</span>
+   <div className="bg-slate-300 flex flex-col w-full lg:w-96 leading-1.5 p-4 border-gray-200  rounded-e-xl rounded-es-xl dark:bg-gray-900">
+      <div className="flex items-center space-x-3 rtl:space-x-reverse">
+         <span className="text-sm font-semibold text-gray-800 dark:text-white">Bonnie Green</span>
+         <span className="text-sm font-normal text-gray-700 dark:text-gray-400">11:46</span>
       </div>
-      <p class="text-sm font-normal py-2.5 text-gray-900 dark:text-white">Thats awesome. I think our users will really appreciate the improvements.</p>
-      <span class="text-sm font-normal text-gray-600 dark:text-gray-400">Delivered</span>
+      <p className="text-sm font-normal py-2.5 text-gray-900 dark:text-white">Thats awesome. I think our users will really appreciate the improvements.</p>
+      <span className="text-sm font-normal text-gray-600 dark:text-gray-400">Delivered</span>
    </div>
        </div>
           </div>
@@ -103,13 +104,13 @@ const page = () => {
               <AvatarImage src="https://github.com/shadcn.png" alt="@profile pic" />
           <AvatarFallback>CN</AvatarFallback>
           </Avatar>
-        <div class="flex flex-col w-full lg:w-96 leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-s-xl rounded-ee-xl  dark:bg-gray-700">
-            <div class="flex items-center space-x-2 rtl:space-x-reverse">
-              <span class="text-sm font-semibold text-gray-900 dark:text-white">Bonnie Green</span>
-              <span class="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
+        <div className="flex flex-col w-full lg:w-96 leading-1.5 p-4 border-gray-200 bg-gray-100 rounded-s-xl rounded-ee-xl  dark:bg-gray-700">
+            <div className="flex items-center space-x-2 rtl:space-x-reverse">
+              <span className="text-sm font-semibold text-gray-900 dark:text-white">Bonnie Green</span>
+              <span className="text-sm font-normal text-gray-500 dark:text-gray-400">11:46</span>
             </div>
-            <p class="text-sm font-normal py-2.5 text-gray-900 dark:text-white">Thats awesome. I think our users will really appreciate the improvements.</p>
-            <span class="text-sm font-normal text-gray-500 dark:text-gray-400">Delivered</span>
+            <p className="text-sm font-normal py-2.5 text-gray-900 dark:text-white">Thats awesome. I think our users will really appreciate the improvements.</p>
+            <span className="text-sm font-normal text-gray-500 dark:text-gray-400">Delivered</span>
         </div>
         </div>
           </div>
@@ -121,11 +122,9 @@ const page = () => {
   })
 }
 </div>
-        <div className="fixed lg:absolute bottom-0 w-full flex px-2 lg:px-8 py-2 shadow-lg gap-4">
-          <Input autoFocus id="message" className="ring-1" />
-          <Button className="bg-main "><SendHorizontal className='text-white' /></Button>
-        </div>
-
+        
+    <MessageBox />
+    
       </article>
     </section>
 

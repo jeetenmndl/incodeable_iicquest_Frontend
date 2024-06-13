@@ -11,14 +11,15 @@ const LoginLogout = () => {
     const [logged, setlogged] = useState("")
     
     useEffect(() => {
-        setlogged(localStorage.getItem("username"))
+        let check = localStorage.getItem("id")
+        setlogged(check)
         console.log(logged);
       // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
     
 
         return(
-            logged != null && logged != "" && logged?
+            logged == null || logged == ""?
             <Link href="/auth" className="font-bold cursor-pointer hover:underline">LOG IN</Link>
             :
             <Link href="/force-logout" className="font-bold cursor-pointer hover:underline">LOG OUT</Link>

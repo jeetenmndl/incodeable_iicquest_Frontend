@@ -6,11 +6,13 @@ import { useRouter } from 'next/navigation'
 import { useToast } from './ui/use-toast'
 import getIssueReplies from '@/lib/actions/getIssueReplies'
 import { Button } from './ui/button'
+import postRelation from '@/lib/actions/postRelation'
 
 const RecentIssue = () => {
 
     const {toast} = useToast();
-    const router = useRouter()
+    const router = useRouter();
+    const [userID, setuserID] = useState(null)
 
     useEffect( () => {
         const id = localStorage.getItem("id");
@@ -22,6 +24,7 @@ const RecentIssue = () => {
             router.push("/auth");
             }
         console.log(id)
+        setuserID(id);
         getReplies(id);
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -33,6 +36,24 @@ const RecentIssue = () => {
     }
 
     const [data, setdata] = useState(null);
+
+    const createRelation = async (reply_by) =>{
+        const response = await postRelation(userID, reply_by);
+        if(response.posted){
+            toast({
+                title: "Congratulations",
+                description: "Relation created successfully"
+            })
+            router.push("/relation")
+        }
+        else{
+            toast({
+                title: "Oops",
+                description: response.message,
+                variant: "destructive"
+            })
+        }
+    }
     
     
   return (
@@ -58,7 +79,7 @@ const RecentIssue = () => {
                 <p className='leading-8'>{item.message}</p>
             </CardContent>
             <CardFooter>
-                <Button className="w-full bg-main">Relate</Button>
+                <Button onClick={()=>{createRelation( item.replied_by.id)}} className="w-full bg-main">Relate</Button>
             </CardFooter>
          </Card>
      )

@@ -41,7 +41,7 @@ const Navbar = () => {
           <Link href="/">
             <Image src={Logo} alt="Hamrodera" className=' w-7 h-7 md:w-12 md:h-12'/>
           </Link>
-          <Link href="/" className=' text-xl md:text-3xl font-semibold text-gray-800'>PARIWAR</Link>
+          <Link href="/" className=' text-xl tracking-wide md:text-3xl font-semibold text-gray-800'>Pariwar</Link>
         </div>
 
         {/* <!-- links primary  --> */}
@@ -54,7 +54,7 @@ const Navbar = () => {
       </div>
 
       <div className='flex gap-4 items-center'>
-        <Link href="/">
+        <Link href="/profile">
           <CircleUser strokeWidth={1.75}  />
         </Link>
         <SideBar />

@@ -70,7 +70,7 @@ const ReplyForm = (props) => {
             else{
                 toast({
                     title: "Oops !",
-                    description: response.message,
+                    description: "Some error occured",
                     variant: "destructive",
                 })
             }
