@@ -8,8 +8,8 @@ import {
     HoverCardTrigger,
   } from "@/components/ui/hover-card"
 import LoginLogout from './LoginLogout'
-import SideBar from './SideBar'
 import { CircleUser } from 'lucide-react'
+import SideBar from './Sidebar'
   
 
 const Navbar = () => {
