@@ -1,5 +1,7 @@
 "use server"
 
+import { revalidatePath } from "next/cache";
+
 
 const postIssue = async (formData, id)=>{
 
@@ -23,6 +25,8 @@ const postIssue = async (formData, id)=>{
   
     const query = await fetch(`${process.env.SERVER}/api/post-issue/`, settings)
     const response = await query.json()
+
+    revalidatePath("/my-issues")
   
     return response
   }

@@ -17,6 +17,9 @@ export default function Home() {
         <div className=" px-2 md:px-0 rounded-lg h-60 overflow-hidden grid place-content-center">
          <Image src={Banner} className="w-full brightness-75 " alt="banner" />
         </div>
+        <div className=" px-2 my-4 md:px-0 rounded-lg h-60 overflow-hidden grid place-content-center">
+         <Image src={Banner} className="w-full brightness-75 " alt="banner" />
+        </div>
 
         <hr className="border-gray-300" />
 
