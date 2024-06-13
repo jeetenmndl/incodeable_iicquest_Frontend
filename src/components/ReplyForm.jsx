@@ -29,7 +29,7 @@ import postReply from '@/lib/actions/postReply'
 const formSchema = z.object({
     message: z.string().min(10, {
       message : "At least 10 characters.",
-    }),
+    }).max(250, {message: "Limit exceed, 250 characters only"})
     
   })
 

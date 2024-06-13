@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
@@ -37,6 +37,16 @@ const formSchema = z.object({
 
 const Login = () => {
 
+    useEffect(() => {
+        let check = localStorage.getItem("username")
+        if(check != null && check != ""){
+            router.push("/")
+    }
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
+    
+
     const router = useRouter()
     const {toast}= useToast();
     const [loading, setLoading] = useState(false);
@@ -66,8 +76,10 @@ const Login = () => {
                 localStorage.setItem("username", response.user_name)
                 localStorage.setItem("id", response.user_id)
                 
-
-                router.push("/")
+                setTimeout(() => {
+                    router.push("/")
+                }, 2000);
+                window.location.reload()
             }
             else{
                 toast({

@@ -48,7 +48,7 @@ const formSchema = z.object({
     }),
     description: z.string().min(3, {
         message : "Enter proper description.",
-    }),
+    }).max(250, {message: "Limit exceed, 250 characters allowed"}),
     preferred_char: z.string().min(3, {
         message : "Enter proper email.",
     }),
@@ -89,7 +89,7 @@ const IssueForm = () => {
                     title: "Congratulations !",
                     description: "Issue uploaded sucessfully.",
                 })
-
+                router.push("/my-issues")
                 // revalidatePath("/my-issues")
             }
             else{

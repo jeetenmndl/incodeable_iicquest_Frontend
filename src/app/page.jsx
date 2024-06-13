@@ -31,7 +31,7 @@ export default function Home() {
         
         <div className="border lg:h-96 p-5 lg:p-3 bg-green-100">
           <h3 className="font-medium text-2xl">Build a virtual Family</h3>
-        <p className="text-xs text-gray-600 pt-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum alias rem perspiciatis delectus earum dolorem iusto praesentium facere</p>
+        <p className="text-xs text-gray-600 pt-2">Create a supportive virtual family for students, fostering mental well-being through connection, empathy, and shared experiences.</p>
         <hr className="border-blue-200 mt-5" />
         <div className="w-full px-4 py-8">
           <Image src={Card1} className="w-full " alt="card1" />
@@ -41,7 +41,7 @@ export default function Home() {
 
         <div className="border lg:h-96 p-5 lg:p-3 bg-blue-100">
           <h3 className="font-medium text-2xl">Share Thoughts & Problems</h3>
-        <p className="text-xs text-gray-600 pt-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum alias rem perspiciatis delectus earum dolorem iusto praesentium facere</p>
+        <p className="text-xs text-gray-600 pt-2">Share thoughts and problems in a safe space, connecting with peers for support and understanding</p>
         <hr className="border-blue-200 mt-5" />
         <div className="w-full px-8 py-4">
           <Image src={Card2} className="w-full " alt="card1" />
@@ -50,7 +50,7 @@ export default function Home() {
         
         <div className="border lg:h-96 p-5 lg:p-3 bg-orange-100">
           <h3 className="font-medium text-2xl">Track Down the Resolution</h3>
-        <p className="text-xs text-gray-600 pt-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum alias rem perspiciatis delectus earum dolorem iusto praesentium facere</p>
+        <p className="text-xs text-gray-600 pt-2">Track down the resolution of shared issues, ensuring continuous support and effective solutions for student mental well-being.</p>
         <hr className="border-blue-200 mt-5" />
         <div className="w-full px-8 py-4">
           <Image src={Card3} className="w-full " alt="card1" />
